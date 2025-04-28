@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import ProjectIdeas from '../components/ProjectIdeas';
 import ThemeToggle from '../components/ThemeToggle';
+import TechShowcase from '../components/TechShowcase';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={styles.hero}>
+    <div>
       <Head>
         <title>Vibe-Coding Boilerplate</title>
         <meta name="description" content="A launchpad for creative projects built with Node.js and Next.js" />
@@ -26,28 +27,34 @@ export default function Home() {
 
       <ThemeToggle />
 
-      <main>
-        <h1 className={styles.title}>Vibe-Coding Boilerplate</h1>
-        <p className={styles.description}>
-          A launchpad for creative projects built with Node.js and Next.js
-        </p>
-        
-        <div className={styles.panel}>
-          <h2>Project Ideas:</h2>
-          <ProjectIdeas />
-        </div>
-        
-        <Link href="/build">
-          <button className={styles.button}>Start Building</button>
-        </Link>
-        
-        {apiMessage && (
-          <div className={styles.apiExample}>
-            <h3>API Connection Test:</h3>
-            <p>{apiMessage}</p>
+      <section className={styles.hero}>
+        <main>
+          <h1 className={styles.title}>Vibe-Coding Boilerplate</h1>
+          <p className={styles.description}>
+            A launchpad for creative projects built with Node.js and Next.js
+          </p>
+          
+          <div className={styles.panel}>
+            <h2>Project Ideas:</h2>
+            <ProjectIdeas />
           </div>
-        )}
-      </main>
+          
+          <Link href="/build">
+            <button className={styles.button}>Start Building</button>
+          </Link>
+          
+          {apiMessage && (
+            <div className={styles.apiExample}>
+              <h3>API Connection Test:</h3>
+              <p>{apiMessage}</p>
+            </div>
+          )}
+        </main>
+      </section>
+
+      <section>
+        <TechShowcase />
+      </section>
 
       <footer className={styles.footer}>
         <p>Expand this boilerplate by exploring the codebase and following the prompts.</p>

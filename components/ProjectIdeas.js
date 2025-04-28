@@ -4,7 +4,11 @@ import styles from '../styles/Home.module.css';
 const ideas = [
   "Add user authentication and profiles",
   "Integrate a database for persistent storage",
-  "Implement a payment system with Stripe"
+  "Implement a payment system with Stripe",
+  "Create a real-time chat with Socket.io",
+  "Build a RESTful API with Express",
+  "Add file uploads with cloud storage",
+  "Implement server-side rendering optimization"
 ];
 
 export default function ProjectIdeas() {
